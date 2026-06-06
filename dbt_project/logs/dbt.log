@@ -2522,3 +2522,587 @@ having count(*) > 1
 [0m16:32:52.143165 [debug] [MainThread]: Command `dbt test` succeeded at 16:32:52.143165 after 2.71 seconds
 [0m16:32:52.143165 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288B5845650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288BDE19690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288BDE19590>]}
 [0m16:32:52.145731 [debug] [MainThread]: Flushing usage events
+[0m17:35:20.746453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0DB73A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0DB70B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0DEE4C10>]}
+
+
+============================== 17:35:20.756243 | b68d3c6c-282c-4690-b9ff-2b316e190801 ==============================
+[0m17:35:20.756243 [info ] [MainThread]: Running with dbt=1.7.0
+[0m17:35:20.764694 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'use_experimental_parser': 'False', 'profiles_dir': 'C:\\Users\\nagzz\\.dbt', 'printer_width': '80', 'introspect': 'True', 'log_format': 'default', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'log_cache_events': 'False', 'no_print': 'None', 'quiet': 'False', 'target_path': 'None', 'indirect_selection': 'eager', 'warn_error': 'None', 'debug': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'invocation_command': 'dbt run', 'cache_selected_only': 'False', 'log_path': 'E:\\OrderWave\\dbt_project\\logs', 'write_json': 'True', 'fail_fast': 'False'}
+[0m17:35:21.351988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F365590>]}
+[0m17:35:21.811404 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0DC0D450>]}
+[0m17:35:21.819378 [info ] [MainThread]: Registered adapter: postgres=1.7.0
+[0m17:35:21.849699 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m17:35:21.879526 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m17:35:21.882816 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0DB82110>]}
+[0m17:35:24.856469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F677650>]}
+[0m17:35:24.893863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F6CE590>]}
+[0m17:35:24.898551 [info ] [MainThread]: Found 7 models, 8 tests, 0 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[0m17:35:24.898551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F6C51D0>]}
+[0m17:35:24.905258 [info ] [MainThread]: 
+[0m17:35:24.908865 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:35:24.916438 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m17:35:24.941622 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m17:35:24.945626 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:35:24.946640 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:35:27.646603 [debug] [ThreadPool]: SQL status: SELECT 15 in 3.0 seconds
+[0m17:35:27.653541 [debug] [ThreadPool]: On list_postgres: Close
+[0m17:35:27.666727 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m17:35:27.669487 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:35:27.670710 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:35:29.814711 [debug] [ThreadPool]: SQL status: SELECT 15 in 2.0 seconds
+[0m17:35:29.822418 [debug] [ThreadPool]: On list_postgres: Close
+[0m17:35:29.829961 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_marts_marts'
+[0m17:35:29.854024 [debug] [ThreadPool]: Using postgres connection "list_postgres_marts_marts"
+[0m17:35:29.855720 [debug] [ThreadPool]: On list_postgres_marts_marts: BEGIN
+[0m17:35:29.856916 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:35:32.046380 [debug] [ThreadPool]: SQL status: BEGIN in 2.0 seconds
+[0m17:35:32.051987 [debug] [ThreadPool]: Using postgres connection "list_postgres_marts_marts"
+[0m17:35:32.052501 [debug] [ThreadPool]: On list_postgres_marts_marts: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "connection_name": "list_postgres_marts_marts"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'marts_marts'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'marts_marts'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'marts_marts'
+  
+[0m17:35:32.274867 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m17:35:32.280170 [debug] [ThreadPool]: On list_postgres_marts_marts: ROLLBACK
+[0m17:35:32.466495 [debug] [ThreadPool]: On list_postgres_marts_marts: Close
+[0m17:35:32.472503 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres_marts_marts, now list_postgres_marts_staging)
+[0m17:35:32.476534 [debug] [ThreadPool]: Using postgres connection "list_postgres_marts_staging"
+[0m17:35:32.479733 [debug] [ThreadPool]: On list_postgres_marts_staging: BEGIN
+[0m17:35:32.481760 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:35:34.918517 [debug] [ThreadPool]: SQL status: BEGIN in 2.0 seconds
+[0m17:35:34.920551 [debug] [ThreadPool]: Using postgres connection "list_postgres_marts_staging"
+[0m17:35:34.923629 [debug] [ThreadPool]: On list_postgres_marts_staging: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "connection_name": "list_postgres_marts_staging"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'marts_staging'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'marts_staging'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'marts_staging'
+  
+[0m17:35:35.217402 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m17:35:35.228510 [debug] [ThreadPool]: On list_postgres_marts_staging: ROLLBACK
+[0m17:35:35.529553 [debug] [ThreadPool]: On list_postgres_marts_staging: Close
+[0m17:35:35.545067 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:35.546736 [debug] [MainThread]: On master: BEGIN
+[0m17:35:35.548804 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:35:37.886390 [debug] [MainThread]: SQL status: BEGIN in 2.0 seconds
+[0m17:35:37.886390 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:37.891936 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m17:35:38.090058 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m17:35:38.096566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F5ABF90>]}
+[0m17:35:38.099409 [debug] [MainThread]: On master: ROLLBACK
+[0m17:35:38.396975 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:38.396975 [debug] [MainThread]: On master: BEGIN
+[0m17:35:39.361451 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m17:35:39.364518 [debug] [MainThread]: On master: COMMIT
+[0m17:35:39.366633 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:39.371280 [debug] [MainThread]: On master: COMMIT
+[0m17:35:39.753240 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m17:35:39.758129 [debug] [MainThread]: On master: Close
+[0m17:35:39.766433 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:35:39.769073 [info ] [MainThread]: 
+[0m17:35:39.779081 [debug] [Thread-1 (]: Began running node model.orderwave.stg_inventory
+[0m17:35:39.789809 [info ] [Thread-1 (]: 1 of 7 START sql view model marts_staging.stg_inventory ........................ [RUN]
+[0m17:35:39.803697 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.orderwave.stg_inventory'
+[0m17:35:39.831025 [debug] [Thread-1 (]: Began compiling node model.orderwave.stg_inventory
+[0m17:35:39.854712 [debug] [Thread-1 (]: Writing injected SQL for node "model.orderwave.stg_inventory"
+[0m17:35:39.861450 [debug] [Thread-1 (]: Timing info for model.orderwave.stg_inventory (compile): 17:35:39.834968 => 17:35:39.859437
+[0m17:35:39.863468 [debug] [Thread-1 (]: Began executing node model.orderwave.stg_inventory
+[0m17:35:40.003473 [debug] [Thread-1 (]: Writing runtime sql for node "model.orderwave.stg_inventory"
+[0m17:35:40.008570 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_inventory"
+[0m17:35:40.010586 [debug] [Thread-1 (]: On model.orderwave.stg_inventory: BEGIN
+[0m17:35:40.013131 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:35:43.238845 [debug] [Thread-1 (]: SQL status: BEGIN in 3.0 seconds
+[0m17:35:43.240859 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_inventory"
+[0m17:35:43.242874 [debug] [Thread-1 (]: On model.orderwave.stg_inventory: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.stg_inventory"} */
+
+  create view "postgres"."marts_staging"."stg_inventory__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    product_id,
+    warehouse_id,
+    warehouse_name,
+    stock_quantity,
+    reorder_level,
+    last_updated::date AS last_updated,
+    CASE WHEN stock_quantity < reorder_level THEN true ELSE false END AS is_low_stock,
+    ingested_at
+FROM raw.inventory
+WHERE product_id IS NOT NULL
+  );
+[0m17:35:43.479818 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m17:35:43.503412 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_inventory"
+[0m17:35:43.505425 [debug] [Thread-1 (]: On model.orderwave.stg_inventory: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.stg_inventory"} */
+alter table "postgres"."marts_staging"."stg_inventory__dbt_tmp" rename to "stg_inventory"
+[0m17:35:43.821290 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m17:35:43.868680 [debug] [Thread-1 (]: On model.orderwave.stg_inventory: COMMIT
+[0m17:35:43.870692 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_inventory"
+[0m17:35:43.872710 [debug] [Thread-1 (]: On model.orderwave.stg_inventory: COMMIT
+[0m17:35:44.262732 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m17:35:44.286397 [debug] [Thread-1 (]: Applying DROP to: "postgres"."marts_staging"."stg_inventory__dbt_backup"
+[0m17:35:44.306399 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_inventory"
+[0m17:35:44.308469 [debug] [Thread-1 (]: On model.orderwave.stg_inventory: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.stg_inventory"} */
+drop view if exists "postgres"."marts_staging"."stg_inventory__dbt_backup" cascade
+[0m17:35:44.543181 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m17:35:44.549282 [debug] [Thread-1 (]: Timing info for model.orderwave.stg_inventory (execute): 17:35:39.866505 => 17:35:44.549282
+[0m17:35:44.551301 [debug] [Thread-1 (]: On model.orderwave.stg_inventory: Close
+[0m17:35:44.553317 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F840190>]}
+[0m17:35:44.556355 [info ] [Thread-1 (]: 1 of 7 OK created sql view model marts_staging.stg_inventory ................... [[32mCREATE VIEW[0m in 4.75s]
+[0m17:35:44.561005 [debug] [Thread-1 (]: Finished running node model.orderwave.stg_inventory
+[0m17:35:44.561005 [debug] [Thread-1 (]: Began running node model.orderwave.stg_orders
+[0m17:35:44.566818 [info ] [Thread-1 (]: 2 of 7 START sql view model marts_staging.stg_orders ........................... [RUN]
+[0m17:35:44.569573 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.orderwave.stg_inventory, now model.orderwave.stg_orders)
+[0m17:35:44.571589 [debug] [Thread-1 (]: Began compiling node model.orderwave.stg_orders
+[0m17:35:44.580663 [debug] [Thread-1 (]: Writing injected SQL for node "model.orderwave.stg_orders"
+[0m17:35:44.591296 [debug] [Thread-1 (]: Timing info for model.orderwave.stg_orders (compile): 17:35:44.574034 => 17:35:44.589888
+[0m17:35:44.596270 [debug] [Thread-1 (]: Began executing node model.orderwave.stg_orders
+[0m17:35:44.616508 [debug] [Thread-1 (]: Writing runtime sql for node "model.orderwave.stg_orders"
+[0m17:35:44.622393 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_orders"
+[0m17:35:44.624565 [debug] [Thread-1 (]: On model.orderwave.stg_orders: BEGIN
+[0m17:35:44.628434 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:35:47.410437 [debug] [Thread-1 (]: SQL status: BEGIN in 3.0 seconds
+[0m17:35:47.412447 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_orders"
+[0m17:35:47.412447 [debug] [Thread-1 (]: On model.orderwave.stg_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.stg_orders"} */
+
+  create view "postgres"."marts_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    order_id,
+    customer_id,
+    customer_name,
+    customer_email,
+    product_id,
+    quantity,
+    unit_price,
+    total_amount,
+    order_status,
+    order_date::date AS order_date,
+    city,
+    state,
+    ingested_at
+FROM raw.orders
+WHERE order_id IS NOT NULL
+  );
+[0m17:35:47.828157 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m17:35:47.841070 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_orders"
+[0m17:35:47.844140 [debug] [Thread-1 (]: On model.orderwave.stg_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.stg_orders"} */
+alter table "postgres"."marts_staging"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m17:35:48.126499 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m17:35:48.133223 [debug] [Thread-1 (]: On model.orderwave.stg_orders: COMMIT
+[0m17:35:48.136260 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_orders"
+[0m17:35:48.138318 [debug] [Thread-1 (]: On model.orderwave.stg_orders: COMMIT
+[0m17:35:48.553499 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m17:35:48.560633 [debug] [Thread-1 (]: Applying DROP to: "postgres"."marts_staging"."stg_orders__dbt_backup"
+[0m17:35:48.564076 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_orders"
+[0m17:35:48.564076 [debug] [Thread-1 (]: On model.orderwave.stg_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.stg_orders"} */
+drop view if exists "postgres"."marts_staging"."stg_orders__dbt_backup" cascade
+[0m17:35:48.748503 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m17:35:48.754553 [debug] [Thread-1 (]: Timing info for model.orderwave.stg_orders (execute): 17:35:44.598201 => 17:35:48.752537
+[0m17:35:48.756569 [debug] [Thread-1 (]: On model.orderwave.stg_orders: Close
+[0m17:35:48.760348 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F8D99D0>]}
+[0m17:35:48.762364 [info ] [Thread-1 (]: 2 of 7 OK created sql view model marts_staging.stg_orders ...................... [[32mCREATE VIEW[0m in 4.19s]
+[0m17:35:48.790105 [debug] [Thread-1 (]: Finished running node model.orderwave.stg_orders
+[0m17:35:48.793948 [debug] [Thread-1 (]: Began running node model.orderwave.stg_products
+[0m17:35:48.796590 [info ] [Thread-1 (]: 3 of 7 START sql view model marts_staging.stg_products ......................... [RUN]
+[0m17:35:48.834603 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.orderwave.stg_orders, now model.orderwave.stg_products)
+[0m17:35:48.839475 [debug] [Thread-1 (]: Began compiling node model.orderwave.stg_products
+[0m17:35:48.846510 [debug] [Thread-1 (]: Writing injected SQL for node "model.orderwave.stg_products"
+[0m17:35:48.850348 [debug] [Thread-1 (]: Timing info for model.orderwave.stg_products (compile): 17:35:48.841148 => 17:35:48.850348
+[0m17:35:48.853377 [debug] [Thread-1 (]: Began executing node model.orderwave.stg_products
+[0m17:35:48.881699 [debug] [Thread-1 (]: Writing runtime sql for node "model.orderwave.stg_products"
+[0m17:35:48.896662 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_products"
+[0m17:35:48.908347 [debug] [Thread-1 (]: On model.orderwave.stg_products: BEGIN
+[0m17:35:48.912373 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:35:51.608915 [debug] [Thread-1 (]: SQL status: BEGIN in 3.0 seconds
+[0m17:35:51.612848 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_products"
+[0m17:35:51.614404 [debug] [Thread-1 (]: On model.orderwave.stg_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.stg_products"} */
+
+  create view "postgres"."marts_staging"."stg_products__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    product_id,
+    product_name,
+    category,
+    sub_category,
+    brand,
+    unit_price,
+    cost_price,
+    ingested_at
+FROM raw.products
+WHERE product_id IS NOT NULL
+  );
+[0m17:35:51.798211 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m17:35:51.810948 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_products"
+[0m17:35:51.812964 [debug] [Thread-1 (]: On model.orderwave.stg_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.stg_products"} */
+alter table "postgres"."marts_staging"."stg_products__dbt_tmp" rename to "stg_products"
+[0m17:35:52.112959 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m17:35:52.122526 [debug] [Thread-1 (]: On model.orderwave.stg_products: COMMIT
+[0m17:35:52.124538 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_products"
+[0m17:35:52.126578 [debug] [Thread-1 (]: On model.orderwave.stg_products: COMMIT
+[0m17:35:53.559082 [debug] [Thread-1 (]: SQL status: COMMIT in 1.0 seconds
+[0m17:35:53.572577 [debug] [Thread-1 (]: Applying DROP to: "postgres"."marts_staging"."stg_products__dbt_backup"
+[0m17:35:53.579605 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.stg_products"
+[0m17:35:53.583641 [debug] [Thread-1 (]: On model.orderwave.stg_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.stg_products"} */
+drop view if exists "postgres"."marts_staging"."stg_products__dbt_backup" cascade
+[0m17:35:55.083371 [debug] [Thread-1 (]: SQL status: DROP VIEW in 1.0 seconds
+[0m17:35:55.089949 [debug] [Thread-1 (]: Timing info for model.orderwave.stg_products (execute): 17:35:48.853377 => 17:35:55.086267
+[0m17:35:55.089949 [debug] [Thread-1 (]: On model.orderwave.stg_products: Close
+[0m17:35:55.089949 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F878E10>]}
+[0m17:35:55.096645 [info ] [Thread-1 (]: 3 of 7 OK created sql view model marts_staging.stg_products .................... [[32mCREATE VIEW[0m in 6.26s]
+[0m17:35:55.100929 [debug] [Thread-1 (]: Finished running node model.orderwave.stg_products
+[0m17:35:55.103097 [debug] [Thread-1 (]: Began running node model.orderwave.dim_customers
+[0m17:35:55.103097 [info ] [Thread-1 (]: 4 of 7 START sql table model marts_marts.dim_customers ......................... [RUN]
+[0m17:35:55.106446 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.orderwave.stg_products, now model.orderwave.dim_customers)
+[0m17:35:55.109359 [debug] [Thread-1 (]: Began compiling node model.orderwave.dim_customers
+[0m17:35:55.118006 [debug] [Thread-1 (]: Writing injected SQL for node "model.orderwave.dim_customers"
+[0m17:35:55.122364 [debug] [Thread-1 (]: Timing info for model.orderwave.dim_customers (compile): 17:35:55.111928 => 17:35:55.118893
+[0m17:35:55.123452 [debug] [Thread-1 (]: Began executing node model.orderwave.dim_customers
+[0m17:35:55.176701 [debug] [Thread-1 (]: Writing runtime sql for node "model.orderwave.dim_customers"
+[0m17:35:55.176701 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_customers"
+[0m17:35:55.182719 [debug] [Thread-1 (]: On model.orderwave.dim_customers: BEGIN
+[0m17:35:55.182719 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:35:59.083436 [debug] [Thread-1 (]: SQL status: BEGIN in 4.0 seconds
+[0m17:35:59.083436 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_customers"
+[0m17:35:59.088512 [debug] [Thread-1 (]: On model.orderwave.dim_customers: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.dim_customers"} */
+
+  
+    
+
+  create  table "postgres"."marts_marts"."dim_customers__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT DISTINCT
+    customer_id,
+    customer_name,
+    customer_email,
+    city,
+    state
+FROM "postgres"."marts_staging"."stg_orders"
+  );
+  
+[0m17:35:59.506276 [debug] [Thread-1 (]: SQL status: SELECT 27 in 0.0 seconds
+[0m17:35:59.520773 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_customers"
+[0m17:35:59.523839 [debug] [Thread-1 (]: On model.orderwave.dim_customers: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.dim_customers"} */
+alter table "postgres"."marts_marts"."dim_customers__dbt_tmp" rename to "dim_customers"
+[0m17:35:59.757981 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m17:35:59.779076 [debug] [Thread-1 (]: On model.orderwave.dim_customers: COMMIT
+[0m17:35:59.781085 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_customers"
+[0m17:35:59.783093 [debug] [Thread-1 (]: On model.orderwave.dim_customers: COMMIT
+[0m17:35:59.958454 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m17:35:59.967822 [debug] [Thread-1 (]: Applying DROP to: "postgres"."marts_marts"."dim_customers__dbt_backup"
+[0m17:35:59.982788 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_customers"
+[0m17:35:59.984800 [debug] [Thread-1 (]: On model.orderwave.dim_customers: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.dim_customers"} */
+drop table if exists "postgres"."marts_marts"."dim_customers__dbt_backup" cascade
+[0m17:36:00.320393 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m17:36:00.327800 [debug] [Thread-1 (]: Timing info for model.orderwave.dim_customers (execute): 17:35:55.126478 => 17:36:00.327800
+[0m17:36:00.329827 [debug] [Thread-1 (]: On model.orderwave.dim_customers: Close
+[0m17:36:00.331837 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F85E350>]}
+[0m17:36:00.336093 [info ] [Thread-1 (]: 4 of 7 OK created sql table model marts_marts.dim_customers .................... [[32mSELECT 27[0m in 5.23s]
+[0m17:36:00.336093 [debug] [Thread-1 (]: Finished running node model.orderwave.dim_customers
+[0m17:36:00.336093 [debug] [Thread-1 (]: Began running node model.orderwave.dim_dates
+[0m17:36:00.336093 [info ] [Thread-1 (]: 5 of 7 START sql table model marts_marts.dim_dates ............................. [RUN]
+[0m17:36:00.336093 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.orderwave.dim_customers, now model.orderwave.dim_dates)
+[0m17:36:00.347636 [debug] [Thread-1 (]: Began compiling node model.orderwave.dim_dates
+[0m17:36:00.354346 [debug] [Thread-1 (]: Writing injected SQL for node "model.orderwave.dim_dates"
+[0m17:36:00.356487 [debug] [Thread-1 (]: Timing info for model.orderwave.dim_dates (compile): 17:36:00.347636 => 17:36:00.356487
+[0m17:36:00.361270 [debug] [Thread-1 (]: Began executing node model.orderwave.dim_dates
+[0m17:36:00.368085 [debug] [Thread-1 (]: Writing runtime sql for node "model.orderwave.dim_dates"
+[0m17:36:00.376205 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_dates"
+[0m17:36:00.376205 [debug] [Thread-1 (]: On model.orderwave.dim_dates: BEGIN
+[0m17:36:00.376205 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:36:03.497499 [debug] [Thread-1 (]: SQL status: BEGIN in 3.0 seconds
+[0m17:36:03.504560 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_dates"
+[0m17:36:03.507460 [debug] [Thread-1 (]: On model.orderwave.dim_dates: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.dim_dates"} */
+
+  
+    
+
+  create  table "postgres"."marts_marts"."dim_dates__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT DISTINCT
+    order_date AS date_day,
+    EXTRACT(YEAR FROM order_date)::int AS year,
+    EXTRACT(MONTH FROM order_date)::int AS month,
+    EXTRACT(DAY FROM order_date)::int AS day,
+    TO_CHAR(order_date, 'Month') AS month_name,
+    EXTRACT(DOW FROM order_date)::int AS day_of_week,
+    TO_CHAR(order_date, 'Day') AS day_name
+FROM "postgres"."marts_staging"."stg_orders"
+  );
+  
+[0m17:36:03.691515 [debug] [Thread-1 (]: SQL status: SELECT 30 in 0.0 seconds
+[0m17:36:03.708479 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_dates"
+[0m17:36:03.710506 [debug] [Thread-1 (]: On model.orderwave.dim_dates: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.dim_dates"} */
+alter table "postgres"."marts_marts"."dim_dates__dbt_tmp" rename to "dim_dates"
+[0m17:36:03.887360 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m17:36:03.903693 [debug] [Thread-1 (]: On model.orderwave.dim_dates: COMMIT
+[0m17:36:03.906389 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_dates"
+[0m17:36:03.908464 [debug] [Thread-1 (]: On model.orderwave.dim_dates: COMMIT
+[0m17:36:04.101549 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m17:36:04.106932 [debug] [Thread-1 (]: Applying DROP to: "postgres"."marts_marts"."dim_dates__dbt_backup"
+[0m17:36:04.112493 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_dates"
+[0m17:36:04.114510 [debug] [Thread-1 (]: On model.orderwave.dim_dates: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.dim_dates"} */
+drop table if exists "postgres"."marts_marts"."dim_dates__dbt_backup" cascade
+[0m17:36:04.305287 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m17:36:04.312061 [debug] [Thread-1 (]: Timing info for model.orderwave.dim_dates (execute): 17:36:00.361270 => 17:36:04.309615
+[0m17:36:04.312061 [debug] [Thread-1 (]: On model.orderwave.dim_dates: Close
+[0m17:36:04.316554 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F34DA10>]}
+[0m17:36:04.319558 [info ] [Thread-1 (]: 5 of 7 OK created sql table model marts_marts.dim_dates ........................ [[32mSELECT 30[0m in 3.98s]
+[0m17:36:04.324778 [debug] [Thread-1 (]: Finished running node model.orderwave.dim_dates
+[0m17:36:04.327382 [debug] [Thread-1 (]: Began running node model.orderwave.dim_products
+[0m17:36:04.329949 [info ] [Thread-1 (]: 6 of 7 START sql table model marts_marts.dim_products .......................... [RUN]
+[0m17:36:04.333347 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.orderwave.dim_dates, now model.orderwave.dim_products)
+[0m17:36:04.335391 [debug] [Thread-1 (]: Began compiling node model.orderwave.dim_products
+[0m17:36:04.346486 [debug] [Thread-1 (]: Writing injected SQL for node "model.orderwave.dim_products"
+[0m17:36:04.352503 [debug] [Thread-1 (]: Timing info for model.orderwave.dim_products (compile): 17:36:04.337605 => 17:36:04.351147
+[0m17:36:04.353691 [debug] [Thread-1 (]: Began executing node model.orderwave.dim_products
+[0m17:36:04.368788 [debug] [Thread-1 (]: Writing runtime sql for node "model.orderwave.dim_products"
+[0m17:36:04.374886 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_products"
+[0m17:36:04.378466 [debug] [Thread-1 (]: On model.orderwave.dim_products: BEGIN
+[0m17:36:04.380357 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:36:07.068751 [debug] [Thread-1 (]: SQL status: BEGIN in 3.0 seconds
+[0m17:36:07.073093 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_products"
+[0m17:36:07.075868 [debug] [Thread-1 (]: On model.orderwave.dim_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.dim_products"} */
+
+  
+    
+
+  create  table "postgres"."marts_marts"."dim_products__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT
+    product_id,
+    product_name,
+    category,
+    sub_category,
+    brand,
+    unit_price,
+    cost_price
+FROM "postgres"."marts_staging"."stg_products"
+  );
+  
+[0m17:36:07.532040 [debug] [Thread-1 (]: SQL status: SELECT 10 in 0.0 seconds
+[0m17:36:07.542678 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_products"
+[0m17:36:07.548255 [debug] [Thread-1 (]: On model.orderwave.dim_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.dim_products"} */
+alter table "postgres"."marts_marts"."dim_products__dbt_tmp" rename to "dim_products"
+[0m17:36:07.706757 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m17:36:07.716792 [debug] [Thread-1 (]: On model.orderwave.dim_products: COMMIT
+[0m17:36:07.716792 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_products"
+[0m17:36:07.716792 [debug] [Thread-1 (]: On model.orderwave.dim_products: COMMIT
+[0m17:36:07.871796 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m17:36:07.880814 [debug] [Thread-1 (]: Applying DROP to: "postgres"."marts_marts"."dim_products__dbt_backup"
+[0m17:36:07.886943 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.dim_products"
+[0m17:36:07.890602 [debug] [Thread-1 (]: On model.orderwave.dim_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.dim_products"} */
+drop table if exists "postgres"."marts_marts"."dim_products__dbt_backup" cascade
+[0m17:36:08.067559 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m17:36:08.071676 [debug] [Thread-1 (]: Timing info for model.orderwave.dim_products (execute): 17:36:04.356655 => 17:36:08.071676
+[0m17:36:08.076414 [debug] [Thread-1 (]: On model.orderwave.dim_products: Close
+[0m17:36:08.080342 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F959FD0>]}
+[0m17:36:08.086408 [info ] [Thread-1 (]: 6 of 7 OK created sql table model marts_marts.dim_products ..................... [[32mSELECT 10[0m in 3.75s]
+[0m17:36:08.089007 [debug] [Thread-1 (]: Finished running node model.orderwave.dim_products
+[0m17:36:08.091652 [debug] [Thread-1 (]: Began running node model.orderwave.fact_orders
+[0m17:36:08.094441 [info ] [Thread-1 (]: 7 of 7 START sql table model marts_marts.fact_orders ........................... [RUN]
+[0m17:36:08.098534 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.orderwave.dim_products, now model.orderwave.fact_orders)
+[0m17:36:08.100546 [debug] [Thread-1 (]: Began compiling node model.orderwave.fact_orders
+[0m17:36:08.112097 [debug] [Thread-1 (]: Writing injected SQL for node "model.orderwave.fact_orders"
+[0m17:36:08.118613 [debug] [Thread-1 (]: Timing info for model.orderwave.fact_orders (compile): 17:36:08.102406 => 17:36:08.116556
+[0m17:36:08.121713 [debug] [Thread-1 (]: Began executing node model.orderwave.fact_orders
+[0m17:36:08.137400 [debug] [Thread-1 (]: Writing runtime sql for node "model.orderwave.fact_orders"
+[0m17:36:08.141801 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.fact_orders"
+[0m17:36:08.145464 [debug] [Thread-1 (]: On model.orderwave.fact_orders: BEGIN
+[0m17:36:08.147064 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:36:10.141933 [debug] [Thread-1 (]: SQL status: BEGIN in 2.0 seconds
+[0m17:36:10.144256 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.fact_orders"
+[0m17:36:10.146363 [debug] [Thread-1 (]: On model.orderwave.fact_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.fact_orders"} */
+
+  
+    
+
+  create  table "postgres"."marts_marts"."fact_orders__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT
+    o.order_id,
+    o.customer_id,
+    o.product_id,
+    o.order_date,
+    o.quantity,
+    o.unit_price,
+    o.total_amount,
+    o.order_status,
+    o.city,
+    o.state,
+    p.category,
+    p.brand,
+    p.cost_price,
+    (o.unit_price - p.cost_price) * o.quantity AS gross_profit
+FROM "postgres"."marts_staging"."stg_orders" o
+LEFT JOIN "postgres"."marts_staging"."stg_products" p ON o.product_id = p.product_id
+  );
+  
+[0m17:36:10.351434 [debug] [Thread-1 (]: SQL status: SELECT 30 in 0.0 seconds
+[0m17:36:10.364830 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.fact_orders"
+[0m17:36:10.367185 [debug] [Thread-1 (]: On model.orderwave.fact_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.fact_orders"} */
+alter table "postgres"."marts_marts"."fact_orders__dbt_tmp" rename to "fact_orders"
+[0m17:36:11.469479 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 1.0 seconds
+[0m17:36:11.478658 [debug] [Thread-1 (]: On model.orderwave.fact_orders: COMMIT
+[0m17:36:11.482434 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.fact_orders"
+[0m17:36:11.484409 [debug] [Thread-1 (]: On model.orderwave.fact_orders: COMMIT
+[0m17:36:11.724776 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m17:36:11.736416 [debug] [Thread-1 (]: Applying DROP to: "postgres"."marts_marts"."fact_orders__dbt_backup"
+[0m17:36:11.743333 [debug] [Thread-1 (]: Using postgres connection "model.orderwave.fact_orders"
+[0m17:36:11.744060 [debug] [Thread-1 (]: On model.orderwave.fact_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "orderwave", "target_name": "dev", "node_id": "model.orderwave.fact_orders"} */
+drop table if exists "postgres"."marts_marts"."fact_orders__dbt_backup" cascade
+[0m17:36:12.023855 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m17:36:12.029859 [debug] [Thread-1 (]: Timing info for model.orderwave.fact_orders (execute): 17:36:08.123729 => 17:36:12.029859
+[0m17:36:12.032350 [debug] [Thread-1 (]: On model.orderwave.fact_orders: Close
+[0m17:36:12.035240 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b68d3c6c-282c-4690-b9ff-2b316e190801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F640290>]}
+[0m17:36:12.037266 [info ] [Thread-1 (]: 7 of 7 OK created sql table model marts_marts.fact_orders ...................... [[32mSELECT 30[0m in 3.94s]
+[0m17:36:12.041302 [debug] [Thread-1 (]: Finished running node model.orderwave.fact_orders
+[0m17:36:12.046374 [debug] [MainThread]: Using postgres connection "master"
+[0m17:36:12.048499 [debug] [MainThread]: On master: BEGIN
+[0m17:36:12.051160 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:36:15.566802 [debug] [MainThread]: SQL status: BEGIN in 4.0 seconds
+[0m17:36:15.566802 [debug] [MainThread]: On master: COMMIT
+[0m17:36:15.573681 [debug] [MainThread]: Using postgres connection "master"
+[0m17:36:15.576711 [debug] [MainThread]: On master: COMMIT
+[0m17:36:15.876465 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m17:36:15.878937 [debug] [MainThread]: On master: Close
+[0m17:36:15.883807 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:36:15.883807 [debug] [MainThread]: Connection 'list_postgres' was properly closed.
+[0m17:36:15.887190 [debug] [MainThread]: Connection 'list_postgres_marts_staging' was properly closed.
+[0m17:36:15.889344 [debug] [MainThread]: Connection 'model.orderwave.fact_orders' was properly closed.
+[0m17:36:15.889858 [info ] [MainThread]: 
+[0m17:36:15.889858 [info ] [MainThread]: Finished running 3 view models, 4 table models in 0 hours 0 minutes and 50.98 seconds (50.98s).
+[0m17:36:15.898794 [debug] [MainThread]: Command end result
+[0m17:36:15.954482 [info ] [MainThread]: 
+[0m17:36:15.957976 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:36:15.960743 [info ] [MainThread]: 
+[0m17:36:15.966576 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+[0m17:36:15.972167 [debug] [MainThread]: Command `dbt run` succeeded at 17:36:15.970148 after 55.41 seconds
+[0m17:36:15.972167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F0F4810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F0EC890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC0F0EC9D0>]}
+[0m17:36:15.974960 [debug] [MainThread]: Flushing usage events

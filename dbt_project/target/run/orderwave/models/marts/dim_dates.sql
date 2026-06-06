@@ -2,7 +2,7 @@
   
     
 
-  create  table "orderwave_db"."marts_marts"."dim_dates__dbt_tmp"
+  create  table "postgres"."marts_marts"."dim_dates__dbt_tmp"
   
   
     as
@@ -16,6 +16,6 @@
     TO_CHAR(order_date, 'Month') AS month_name,
     EXTRACT(DOW FROM order_date)::int AS day_of_week,
     TO_CHAR(order_date, 'Day') AS day_name
-FROM "orderwave_db"."marts_staging"."stg_orders"
+FROM "postgres"."marts_staging"."stg_orders"
   );
   

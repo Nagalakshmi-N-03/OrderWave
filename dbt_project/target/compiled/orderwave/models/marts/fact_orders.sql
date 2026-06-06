@@ -13,5 +13,5 @@ SELECT
     p.brand,
     p.cost_price,
     (o.unit_price - p.cost_price) * o.quantity AS gross_profit
-FROM "orderwave_db"."marts_staging"."stg_orders" o
-LEFT JOIN "orderwave_db"."marts_staging"."stg_products" p ON o.product_id = p.product_id
+FROM "postgres"."marts_staging"."stg_orders" o
+LEFT JOIN "postgres"."marts_staging"."stg_products" p ON o.product_id = p.product_id

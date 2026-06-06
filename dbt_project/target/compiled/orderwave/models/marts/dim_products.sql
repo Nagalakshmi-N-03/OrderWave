@@ -6,4 +6,4 @@ SELECT
     brand,
     unit_price,
     cost_price
-FROM "orderwave_db"."marts_staging"."stg_products"
+FROM "postgres"."marts_staging"."stg_products"

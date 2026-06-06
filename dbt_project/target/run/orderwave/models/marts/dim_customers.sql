@@ -2,7 +2,7 @@
   
     
 
-  create  table "orderwave_db"."marts_marts"."dim_customers__dbt_tmp"
+  create  table "postgres"."marts_marts"."dim_customers__dbt_tmp"
   
   
     as
@@ -14,6 +14,6 @@
     customer_email,
     city,
     state
-FROM "orderwave_db"."marts_staging"."stg_orders"
+FROM "postgres"."marts_staging"."stg_orders"
   );
   

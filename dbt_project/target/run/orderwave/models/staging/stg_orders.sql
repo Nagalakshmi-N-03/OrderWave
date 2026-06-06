@@ -1,5 +1,5 @@
 
-  create view "orderwave_db"."marts_staging"."stg_orders__dbt_tmp"
+  create view "postgres"."marts_staging"."stg_orders__dbt_tmp"
     
     
   as (

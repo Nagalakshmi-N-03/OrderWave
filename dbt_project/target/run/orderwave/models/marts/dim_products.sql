@@ -2,7 +2,7 @@
   
     
 
-  create  table "orderwave_db"."marts_marts"."dim_products__dbt_tmp"
+  create  table "postgres"."marts_marts"."dim_products__dbt_tmp"
   
   
     as
@@ -16,6 +16,6 @@
     brand,
     unit_price,
     cost_price
-FROM "orderwave_db"."marts_staging"."stg_products"
+FROM "postgres"."marts_staging"."stg_products"
   );
   
