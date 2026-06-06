@@ -1,0 +1,31 @@
+order_id,customer_id,customer_name,customer_email,product_id,quantity,unit_price,total_amount,order_status,order_date,city,state
+ORD-001,CUST-101,Ravi Kumar,ravi.kumar@gmail.com,PROD-501,2,899.00,1798.00,delivered,2024-01-05,Chennai,Tamil Nadu
+ORD-002,CUST-102,Priya Sharma,priya.s@yahoo.com,PROD-502,1,1299.00,1299.00,delivered,2024-01-06,Mumbai,Maharashtra
+ORD-003,CUST-103,Arun Patel,arun.p@outlook.com,PROD-503,3,499.00,1497.00,shipped,2024-01-07,Ahmedabad,Gujarat
+ORD-004,CUST-104,Deepa Nair,deepa.nair@gmail.com,PROD-504,1,2499.00,2499.00,delivered,2024-01-08,Kochi,Kerala
+ORD-005,CUST-105,Suresh Reddy,suresh.r@gmail.com,PROD-505,2,349.00,698.00,cancelled,2024-01-09,Hyderabad,Telangana
+ORD-006,CUST-106,Meena Iyer,meena.i@gmail.com,PROD-501,1,899.00,899.00,delivered,2024-01-10,Bengaluru,Karnataka
+ORD-007,CUST-107,Karthik Raja,karthik.r@gmail.com,PROD-506,4,199.00,796.00,delivered,2024-01-11,Chennai,Tamil Nadu
+ORD-008,CUST-108,Anita Singh,anita.s@gmail.com,PROD-507,1,3999.00,3999.00,returned,2024-01-12,Delhi,Delhi
+ORD-009,CUST-109,Vijay Menon,vijay.m@yahoo.com,PROD-502,2,1299.00,2598.00,delivered,2024-01-13,Pune,Maharashtra
+ORD-010,CUST-110,Lakshmi Das,lakshmi.d@gmail.com,PROD-508,1,599.00,599.00,shipped,2024-01-14,Kolkata,West Bengal
+ORD-011,CUST-101,Ravi Kumar,ravi.kumar@gmail.com,PROD-503,1,499.00,499.00,delivered,2024-01-20,Chennai,Tamil Nadu
+ORD-012,CUST-111,Naveen Gupta,naveen.g@gmail.com,PROD-509,3,249.00,747.00,delivered,2024-01-21,Jaipur,Rajasthan
+ORD-013,CUST-112,Sowmya Krishnan,sowmya.k@gmail.com,PROD-510,2,799.00,1598.00,delivered,2024-01-22,Chennai,Tamil Nadu
+ORD-014,CUST-113,Ramesh Verma,ramesh.v@outlook.com,PROD-504,1,2499.00,2499.00,cancelled,2024-01-23,Lucknow,Uttar Pradesh
+ORD-015,CUST-114,Bhavna Shah,bhavna.s@gmail.com,PROD-505,5,349.00,1745.00,delivered,2024-01-25,Surat,Gujarat
+ORD-016,CUST-115,Harish Kumar,harish.k@gmail.com,PROD-506,2,199.00,398.00,delivered,2024-02-01,Coimbatore,Tamil Nadu
+ORD-017,CUST-116,Revathi Pillai,revathi.p@gmail.com,PROD-507,1,3999.00,3999.00,delivered,2024-02-03,Thiruvananthapuram,Kerala
+ORD-018,CUST-102,Priya Sharma,priya.s@yahoo.com,PROD-508,2,599.00,1198.00,shipped,2024-02-05,Mumbai,Maharashtra
+ORD-019,CUST-117,Dinesh Rao,dinesh.r@gmail.com,PROD-509,1,249.00,249.00,delivered,2024-02-07,Visakhapatnam,Andhra Pradesh
+ORD-020,CUST-118,Geetha Nambiar,geetha.n@gmail.com,PROD-510,3,799.00,2397.00,delivered,2024-02-10,Kochi,Kerala
+ORD-021,CUST-119,Ajay Bose,ajay.b@gmail.com,PROD-501,2,899.00,1798.00,delivered,2024-02-12,Kolkata,West Bengal
+ORD-022,CUST-120,Sneha Joshi,sneha.j@gmail.com,PROD-502,1,1299.00,1299.00,returned,2024-02-14,Nashik,Maharashtra
+ORD-023,CUST-121,Mohan Pillai,mohan.p@yahoo.com,PROD-503,4,499.00,1996.00,delivered,2024-02-16,Thiruvananthapuram,Kerala
+ORD-024,CUST-122,Saritha Devi,saritha.d@gmail.com,PROD-504,1,2499.00,2499.00,delivered,2024-02-18,Vijayawada,Andhra Pradesh
+ORD-025,CUST-123,Prakash Tiwari,prakash.t@gmail.com,PROD-506,6,199.00,1194.00,delivered,2024-02-20,Varanasi,Uttar Pradesh
+ORD-026,CUST-106,Meena Iyer,meena.i@gmail.com,PROD-507,1,3999.00,3999.00,delivered,2024-03-01,Bengaluru,Karnataka
+ORD-027,CUST-124,Balaji Sundaram,balaji.s@gmail.com,PROD-508,2,599.00,1198.00,shipped,2024-03-03,Madurai,Tamil Nadu
+ORD-028,CUST-125,Kavitha Rajan,kavitha.r@gmail.com,PROD-509,3,249.00,747.00,delivered,2024-03-05,Salem,Tamil Nadu
+ORD-029,CUST-126,Sridhar Naidu,sridhar.n@outlook.com,PROD-510,1,799.00,799.00,cancelled,2024-03-07,Guntur,Andhra Pradesh
+ORD-030,CUST-127,Pooja Mehta,pooja.m@gmail.com,PROD-501,3,899.00,2697.00,delivered,2024-03-10,Ahmedabad,Gujarat

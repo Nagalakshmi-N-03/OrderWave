@@ -1,0 +1,50 @@
+services:
+  postgres:
+    image: postgres:15-bullseye
+    platform: linux/amd64
+    container_name: orderwave_postgres
+    environment:
+      POSTGRES_USER: orderwave
+      POSTGRES_PASSWORD: orderwave123
+      POSTGRES_DB: orderwave_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U orderwave -d orderwave_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  airflow:
+    image: apache/airflow:2.8.0
+    platform: linux/amd64
+    container_name: orderwave_airflow
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://orderwave:orderwave123@postgres:5432/orderwave_db
+      AIRFLOW__CORE__FERNET_KEY: "ZmDfcTF7_60GrrY167zsiPd67pEvs0aGOv2oasOM1Pg="
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__WEBSERVER__SECRET_KEY: "orderwave_secret"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./ingestion:/opt/airflow/ingestion
+      - ./data:/opt/airflow/data
+      - airflow_logs:/opt/airflow/logs
+    ports:
+      - "8080:8080"
+    command: >
+      bash -c "airflow db init &&
+               airflow users create --username admin --password admin
+                 --firstname Admin --lastname User
+                 --role Admin --email admin@orderwave.com &&
+               airflow webserver & airflow scheduler"
+
+volumes:
+  postgres_data:
+  airflow_logs:
