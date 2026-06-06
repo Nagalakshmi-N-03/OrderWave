@@ -1,0 +1,18 @@
+name: 'orderwave'
+version: '1.0.0'
+config-version: 2
+
+profile: 'orderwave'
+
+model-paths: ["models"]
+test-paths: ["tests"]
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  orderwave:
+    staging:
+      +schema: staging
+      +materialized: view
+    marts:
+      +schema: marts
+      +materialized: table

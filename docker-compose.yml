@@ -38,12 +38,7 @@ services:
       - airflow_logs:/opt/airflow/logs
     ports:
       - "8080:8080"
-    command: >
-      bash -c "airflow db init &&
-               airflow users create --username admin --password admin
-                 --firstname Admin --lastname User
-                 --role Admin --email admin@orderwave.com &&
-               airflow webserver & airflow scheduler"
+    command: bash -c "airflow db init && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@orderwave.com && airflow webserver & airflow scheduler"
 
 volumes:
   postgres_data:
