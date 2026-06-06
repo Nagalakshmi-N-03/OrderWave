@@ -79,7 +79,7 @@ Docker Desktop
 Python 3.11
 Git
 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/OrderWave.git
+git clone https://github.com/Nagalakshmi-N-03/OrderWave
 cd OrderWave
 2. Start containers
 docker compose up -d
