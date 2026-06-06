@@ -6,10 +6,10 @@ import plotly.express as px
 st.set_page_config(page_title="OrderWave Dashboard", page_icon="🌊", layout="wide")
 
 DB_CONFIG = {
-    "host": "db.nwxvxmpiyfgbgkfayetk.supabase.co",
+    "host": "aws-1-ap-southeast-2.pooler.supabase.com",
     "port": 5432,
     "dbname": "postgres",
-    "user": "postgres",
+    "user": "postgres.nwxvxmpiyfgbgkfayetk",
     "password": "OrderWave.2.30"
 }
 
